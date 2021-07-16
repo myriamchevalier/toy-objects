@@ -41,7 +41,10 @@ const hotWheels20CarPack = {
 toys.push(hotWheelsTrack);
 toys.push(hotWheels20CarPack);
 
-
 for (const toy of toys) {
-    console.log(toy.name);
-}
+    if (toy.amountInStock > 1) {
+        console.log(`The ${toy.name} costs ${toy.price} and there are ${toy.amountInStock} in stock`);
+    } else {
+        console.log(`The ${toy.name} costs ${toy.price} and there is ${toy.amountInStock} in stock`);
+    } 
+}    
