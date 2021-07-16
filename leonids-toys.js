@@ -51,7 +51,7 @@ toys.push(hotWheels20CarPack);
 } */
 
 //increasing price
-for (const toy of toys) {
+/*for (const toy of toys) {
     // add 5% to original price
     toy.price = toy.price * 1.05
     // log inventory with new prices
@@ -60,4 +60,21 @@ for (const toy of toys) {
     } else {
         console.log(`The ${toy.name} costs ${toy.price} and there is ${toy.amountInStock} in stock`);
     }  
+}*/
+
+//finding specific id
+
+//create a variable in the global scope to represent the id you want to find
+const toyToFind = 3
+
+for (const toy of toys) {
+    if (toy.id === toyToFind) {
+        toy.price = toy.price * 1.05
+
+        if (toy.amountInStock > 1) {
+            console.log(`The ${toy.name} costs ${toy.price} and there are ${toy.amountInStock} in stock`);
+        } else {
+            console.log(`The ${toy.name} costs ${toy.price} and there is ${toy.amountInStock} in stock`);
+        }  
+    }
 }
