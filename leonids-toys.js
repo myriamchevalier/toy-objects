@@ -41,6 +41,32 @@ const hotWheels20CarPack = {
 toys.push(hotWheelsTrack);
 toys.push(hotWheels20CarPack);
 
+// create a function to add toys, that will automatically add an id to the object
+
+const addToy = (toyObject) => {
+    const lastIndex = toys.length - 1
+    const currentLastToy = toys[lastIndex]
+    const maxId = currentLastToy.id
+
+    const newToyId = maxId + 1
+    toyObject.id = newToyId
+
+    toys.push(toyObject)
+}
+
+const barbieDoll = {
+    name: "Barbie Doll",
+    price: 15.99,
+    needsBatteries: false,
+    amountInStock: 6,
+}
+
+addToy(barbieDoll);
+
+console.log(toys)
+
+// IT WORKS *happy dance*
+
 //iteration through inventory
 /*for (const toy of toys) {
     if (toy.amountInStock > 1) {
@@ -65,16 +91,19 @@ toys.push(hotWheels20CarPack);
 //finding specific id
 
 //create a variable in the global scope to represent the id you want to find
-const toyToFind = 3
+// const toyToFind = 3
 
-for (const toy of toys) {
-    if (toy.id === toyToFind) {
-        toy.price = toy.price * 1.05
+// for (const toy of toys) {
+//     if (toy.id === toyToFind) {
+//         toy.price = toy.price * 1.05
 
-        if (toy.amountInStock > 1) {
-            console.log(`The ${toy.name} costs ${toy.price} and there are ${toy.amountInStock} in stock`);
-        } else {
-            console.log(`The ${toy.name} costs ${toy.price} and there is ${toy.amountInStock} in stock`);
-        }  
-    }
-}
+//         if (toy.amountInStock > 1) {
+//             console.log(`The ${toy.name} costs ${toy.price} and there are ${toy.amountInStock} in stock`);
+//         } else {
+//             console.log(`The ${toy.name} costs ${toy.price} and there is ${toy.amountInStock} in stock`);
+//         }  
+//     }
+// }
+
+
+
