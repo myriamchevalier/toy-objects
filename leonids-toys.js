@@ -41,10 +41,23 @@ const hotWheels20CarPack = {
 toys.push(hotWheelsTrack);
 toys.push(hotWheels20CarPack);
 
-for (const toy of toys) {
+//iteration through inventory
+/*for (const toy of toys) {
     if (toy.amountInStock > 1) {
         console.log(`The ${toy.name} costs ${toy.price} and there are ${toy.amountInStock} in stock`);
     } else {
         console.log(`The ${toy.name} costs ${toy.price} and there is ${toy.amountInStock} in stock`);
     } 
-}    
+} */
+
+//increasing price
+for (const toy of toys) {
+    // add 5% to original price
+    toy.price = toy.price * 1.05
+    // log inventory with new prices
+    if (toy.amountInStock > 1) {
+        console.log(`The ${toy.name} costs ${toy.price} and there are ${toy.amountInStock} in stock`);
+    } else {
+        console.log(`The ${toy.name} costs ${toy.price} and there is ${toy.amountInStock} in stock`);
+    }  
+}
